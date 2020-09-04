@@ -19,9 +19,8 @@ You will have to work out the type declaration. Make it as general as possible.
 ["hello","world"]
 -}
 
--- unMaybe :: ???
-unMaybe = undefined
-
+unMaybe :: [Maybe a] -> a
+unMaybe xs = catMaybes xs
 
 {-
 Exercise 2
