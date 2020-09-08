@@ -1,0 +1,2 @@
+language = "bash"
+run = "ghci Lab06.hs"

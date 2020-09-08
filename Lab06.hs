@@ -19,8 +19,11 @@ You will have to work out the type declaration. Make it as general as possible.
 ["hello","world"]
 -}
 
--- unMaybe :: ???
-unMaybe = undefined
+unMaybe :: [Maybe a] -> [a]
+unMaybe xs
+ | length xs == 0 = []
+ | head xs == Just x = x:(unMaybe tail xs)
+ | head xs == Nothing = unMaybe(tail xs)
 
 
 {-
